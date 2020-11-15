@@ -10,8 +10,10 @@ public class View {
     public static void main(String[] args) {
         int type;
         while (true) {
-            type = Menu.INSTANCE.type();
-            if (type == 0) break;
+            do {
+                type = Menu.INSTANCE.type();
+            } while (type < 0 || type > 3);
+            if (type == 0)  break;
 
             controller.getService(type);
             int menu;
