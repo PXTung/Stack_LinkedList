@@ -33,7 +33,8 @@ public class SLLService implements IService {
         StringBuilder subjects = new StringBuilder();
         int size = sList.size();
         for (int i = 0; i < size; i++) {
-            String s = sList.get(i).getData().toString() + "\n";
+            String s = "INDEX " + i + ": ";
+            s += sList.get(i).getData().toString() + "\n";
             subjects.append(s);
         }
         return subjects.toString();

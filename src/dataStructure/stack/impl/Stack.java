@@ -64,7 +64,8 @@ public class Stack<T> implements IStack<T> {
         Element<T> current = element;
         while (count != 0) {
             count--;
-            data.insert(0, current.getData() + "\n");
+            String s = "INDEX " + count + ": ";
+            data.insert(0, s + current.getData() + "\n");
             current = current.getPreElement();
         }
         return data.toString();

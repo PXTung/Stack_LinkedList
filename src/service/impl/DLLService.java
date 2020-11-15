@@ -33,7 +33,8 @@ public class DLLService implements IService {
         StringBuilder subjects = new StringBuilder();
         int size = dList.size();
         for (int i = 0; i < size; i++) {
-            String s = dList.get(i).getData().toString() + "\n";
+            String s = "INDEX " + i + ": ";
+            s += dList.get(i).getData().toString() + "\n";
             subjects.append(s);
         }
         return subjects.toString();
